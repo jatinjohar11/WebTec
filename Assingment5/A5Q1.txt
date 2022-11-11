@@ -1,0 +1,41 @@
+class Mammals{
+		void display1() {
+			System.out.println("I am mammal");
+		}
+}
+
+
+//define class MarineAnimals
+class MarineAnimals {
+	
+		void display2() {
+			System.out.println("I am a marine animal");
+		}
+}
+
+
+//define class BlueWhale
+class BlueWhale extends Mammals extends MarineAnimals {
+		void display3() {
+			System.out.println("I belong to both the categories: Mammals as well as Marine Animals");
+		}
+}
+public class A5Q1 {
+    public static void main(String args[]){
+        Mammals m;  //object for class Mammals
+        MarineAnimals ma; //object for class MarineAnimals
+        BlueWhale bw; //object for class BlueWhale
+        
+        m.display1(); // function of Mammals by the object of Mammal
+        ma.display2(); // function of MarineAnimal by the object of MarineAnimal 
+        bw.display3(); // function of BlueWhale by the object of BlueWhale 
+        bw.display1(); // function of Mammals by object of BlueWhale 
+        bw.display2(); // func of MarineAnimals by object of BlueWhale 
+    }
+}
+
+
+
+Output : Error 
+Because Multiple inheritance is not possible in java....
+So the class BlueWhale extends Mammals extends MarineAnimals will give us error .......
